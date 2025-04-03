@@ -1,5 +1,24 @@
 import { NavItem } from 'types';
 
+export type BoardType = 'SCHOOL' | 'CITY' | 'COUNTRY' | 'WORLD';
+
+export interface Board {
+  id: string;
+  name: string;
+  slug: string;
+  type: BoardType;
+  code?: string;
+  profileImage?: string;
+  coverImage?: string;
+  studentCount: number;
+  postCount: number;
+  createdAt: string;
+  updatedAt: string;
+  status: 'active' | 'inactive';
+  parentId?: string | null;
+  parentName?: string;
+}
+
 export type Product = {
   photo_url: string;
   name: string;
